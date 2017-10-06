@@ -39,9 +39,10 @@ function rf_wc_csv_export_custom_order_columns( $column_headers ){
 					'pa_color' 				=> 'COLOR',
 					'pa_color2'			=> 'COLOR2',
 					'Size'					=> 'SIZE',
-					'YOG' 					=> 'YOG',
-					'Name - Name'		=> 'NAME',
-					'pa_name2'			=> 'NAME2',
+					'Size (&#36;2.00)'		=> 'SIZE2X',
+					'YOG - YOG' 					=> 'YOG',
+					'Name Embroidery - Name'		=> 'NAME',
+					'Name Embroidery - Line 2 (optional)'			=> 'NAME2',
 					'pa_logo'				=> 'LOGO',
 					'pa_background'	=> 'BACKGROUND',
 					'pa_skinlogo'			=> 'SKINLOGO',
@@ -93,7 +94,7 @@ function rf_wc_csv_export_order_headers_split_item_meta( $column_headers, $csv_g
 
 		// get all item meta
 		$all_item_meta = rf_wc_get_item_meta_for_orders( $csv_generator->ids );
-
+		
 		$item_meta_headers = array();
 
 		foreach ( $all_item_meta as $meta_key ) {
